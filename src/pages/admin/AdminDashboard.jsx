@@ -1,28 +1,20 @@
-import React from 'react'
-import EmployeeList from './EmployeeList'
-import EmployeeForm from './EmployeeForm'
+
+import React from "react";
+import Sidebar from "../../components/Sidebar";
 
 const AdminDashboard = () => {
+  const role = "ADMIN"; // In real app, take from Auth Context or localStorage
+
   return (
-    <div>
-      <div>
-        Admin Dashboard
-      </div>
-      <div>
-        <EmployeeList />
-      </div>
-      <div>
-        <EmployeeForm />
-      </div>
-      <div>
-        demo1
-      </div>
-      <div>
-        demo2
+    <div style={{ display: "flex" }}>
+      <Sidebar role={role} />
+      <div style={{ flex: 1, padding: "20px" }}>
+        <h2>Welcome Admin</h2>
+        <p>This is your dashboard.</p>
       </div>
     </div>
+  );
+};
 
-  )
-}
+export default AdminDashboard;
 
-export default AdminDashboard

@@ -10,6 +10,14 @@ import Login from "./auth/login";
 import Unauthorized from "./pages/common/Unauthorized";
 import EmployeeForm from "./pages/admin/EmployeeForm";
 import EmployeeList from "./pages/admin/EmployeeList";
+import EmployeeProfile from "./pages/employee/EmployeeProfile";
+import EmployeeTimesheet from "./pages/employee/EmployeeTimesheet";
+import EmployeeWFH from "./pages/employee/EmployeeWFH";
+import AdminTimesheet from "./pages/admin/AdminTimesheet";
+import AdminWFH from "./pages/admin/AdminWFH";
+import OffBoarding from "./pages/employee/OffBoarding";
+import Tasks from "./pages/employee/Tasks";
+import Goal from "./pages/employee/Goal";
 
 function App() {
   return (
@@ -41,6 +49,16 @@ function App() {
             <EmployeeForm />
           </ProtectedRoute>
         } />
+        <Route path="/admin/timesheet" element={
+          <ProtectedRoute allowedRoles={["ADMIN"]}>
+            <AdminTimesheet />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/wfh" element={
+          <ProtectedRoute allowedRoles={["ADMIN"]}>
+            <AdminWFH />
+          </ProtectedRoute>
+        } />
 
         {/* Employee Routes */}
         <Route path="/employee/dashboard" element={
@@ -48,11 +66,36 @@ function App() {
             <EmployeeDashboard />
           </ProtectedRoute>
         } />
-        {/* <Route path="/employee/profile" element={
+        <Route path="/employee/profile" element={
           <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <Profile />
+            <EmployeeProfile />
           </ProtectedRoute>
-        } /> */}
+        } />
+        <Route path="/employee/timesheet" element={
+          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
+            <EmployeeTimesheet />
+          </ProtectedRoute>
+        } />
+        <Route path="/employee/wfh" element={
+          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
+            <EmployeeWFH />
+          </ProtectedRoute>
+        } />
+        <Route path="/employee/offboarding" element={
+          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
+            <OffBoarding />
+          </ProtectedRoute>
+        } />
+        <Route path="/employee/tasks" element={
+          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
+            <Tasks />
+          </ProtectedRoute>
+        } />
+        <Route path="/employee/goals" element={
+          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
+            <Goal />
+          </ProtectedRoute>
+        } />
       </Routes>
     </Router>
   );

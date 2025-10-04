@@ -1,25 +1,20 @@
-import React from 'react'
+
+import React from "react";
+import Sidebar from "../../components/Sidebar";
 
 const EmployeeDashboard = () => {
-  return (
-    <div>
-       <div>
-          EmployeeDashboard
-        </div>
-        <div>
-          demo1
-        </div>
-        <div>
-          demo2
-        </div>
-        <div>
-          demo3
-        </div>
-        <div>
-          demo4
-        </div>
-        </div>
-  )
-}
+  const role = "EMPLOYEE"; // Get dynamically from context/auth
 
-export default EmployeeDashboard
+  return (
+    <div style={{ display: "flex" }}>
+      <Sidebar role={role} />
+      <div style={{ flex: 1, padding: "20px" }}>
+        <h2>Welcome Employee</h2>
+        <p>This is your dashboard.</p>
+      </div>
+    </div>
+  );
+};
+
+export default EmployeeDashboard;
+
