@@ -18,6 +18,8 @@ import AdminWFH from "./pages/admin/AdminWFH";
 import OffBoarding from "./pages/employee/OffBoarding";
 import Tasks from "./pages/employee/Tasks";
 import Goal from "./pages/employee/Goal";
+import SidebarLayout from "./layout/SidebarLayout";
+import Onboarding from "./pages/employee/Onboarding/Onboarding";
 
 function App() {
   return (
@@ -34,68 +36,37 @@ function App() {
         <Route path="/unauthorized" element={<Unauthorized />} />
 
         {/* Admin Routes */}
-        <Route path="/admin/dashboard" element={
-          <ProtectedRoute allowedRoles={["ADMIN"]}>
-            <AdminDashboard />
-          </ProtectedRoute>
-        } />
-        <Route path="/admin/employees" element={
-          <ProtectedRoute allowedRoles={["ADMIN"]}>
-            <EmployeeList />
-          </ProtectedRoute>
-        } />
-        <Route path="/admin/employees/add" element={
-          <ProtectedRoute allowedRoles={["ADMIN"]}>
-            <EmployeeForm />
-          </ProtectedRoute>
-        } />
-        <Route path="/admin/timesheet" element={
-          <ProtectedRoute allowedRoles={["ADMIN"]}>
-            <AdminTimesheet />
-          </ProtectedRoute>
-        } />
-        <Route path="/admin/wfh" element={
-          <ProtectedRoute allowedRoles={["ADMIN"]}>
-            <AdminWFH />
-          </ProtectedRoute>
-        } />
+        <Route
+          element={
+            <ProtectedRoute allowedRoles={["ADMIN"]}>
+              <SidebarLayout role="ADMIN" />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/employees" element={<EmployeeList />} />
+          <Route path="/admin/employees/add" element={<EmployeeForm />} />
+          <Route path="/admin/timesheet" element={<AdminTimesheet />} />
+          <Route path="/admin/wfh" element={<AdminWFH />} />
+        </Route>
 
         {/* Employee Routes */}
-        <Route path="/employee/dashboard" element={
-          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <EmployeeDashboard />
-          </ProtectedRoute>
-        } />
-        <Route path="/employee/profile" element={
-          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <EmployeeProfile />
-          </ProtectedRoute>
-        } />
-        <Route path="/employee/timesheet" element={
-          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <EmployeeTimesheet />
-          </ProtectedRoute>
-        } />
-        <Route path="/employee/wfh" element={
-          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <EmployeeWFH />
-          </ProtectedRoute>
-        } />
-        <Route path="/employee/offboarding" element={
-          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <OffBoarding />
-          </ProtectedRoute>
-        } />
-        <Route path="/employee/tasks" element={
-          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <Tasks />
-          </ProtectedRoute>
-        } />
-        <Route path="/employee/goals" element={
-          <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-            <Goal />
-          </ProtectedRoute>
-        } />
+         <Route
+          element={
+            <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
+              <SidebarLayout role="EMPLOYEE" />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="/employee/dashboard" element={<EmployeeDashboard />} />
+          <Route path="/employee/profile" element={<EmployeeProfile />} />
+          <Route path="/employee/timesheet" element={<EmployeeTimesheet />} />
+          <Route path="/employee/wfh" element={<EmployeeWFH />} />
+          <Route path="/employee/offboarding" element={<OffBoarding />} />
+          <Route path="/employee/tasks" element={<Tasks />} />
+          <Route path="/employee/goals" element={<Goal />} />
+          <Route path="/employee/onboarding" element={<Onboarding />} />
+        </Route>
       </Routes>
     </Router>
   );
