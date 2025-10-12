@@ -136,6 +136,294 @@ const PersonalForm = ({ onValid }) => {
           </FloatingLabel>
         </Col>
       </Row>
+{/* Current Address */}
+      <Row>
+        <FloatingLabel
+          controlId="floatingTextarea"
+          label="Current Address"
+          className="mb-3"
+        >
+          <Form.Control as="textarea" placeholder="Leave a comment here" style={{ height: '100px' }} />
+        </FloatingLabel>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="country" label="Country">
+            <Controller
+              name="country"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="Country" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="state" label="State ">
+            <Controller
+              name="state"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="State " />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="city" label="City ">
+            <Controller
+              name="city"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="City" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="pincode" label="Pincode">
+            <Controller
+              name="pincode"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Pincode" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="contact" label="Contact No">
+            <Controller
+              name="contact"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Contact No" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
+      
+      {/* permanent Address */}
+      <Row>
+        <FloatingLabel
+          controlId="floatingTextarea"
+          label="Permanent Address"
+          className="mb-3"
+        >
+          <Form.Control as="textarea" placeholder="Leave a comment here" style={{ height: '100px' }} />
+        </FloatingLabel>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="country" label="Country">
+            <Controller
+              name="country"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="Country" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="state" label="State ">
+            <Controller
+              name="state"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="State " />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="city" label="City ">
+            <Controller
+              name="city"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="City" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="pincode" label="Pincode">
+            <Controller
+              name="pincode"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Pincode" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="contact" label="Contact No">
+            <Controller
+              name="contact"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Contact No" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
+
+      {/* BCP address */}
+
+
+      <Row>
+        <FloatingLabel
+          controlId="floatingTextarea"
+          label="BCP Address"
+          className="mb-3"
+        >
+          <Form.Control as="textarea" placeholder="Leave a comment here" style={{ height: '100px' }} />
+        </FloatingLabel>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="country" label="Country">
+            <Controller
+              name="country"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="Country" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="state" label="State ">
+            <Controller
+              name="state"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="State " />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="city" label="City ">
+            <Controller
+              name="city"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="City" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="pincode" label="Pincode">
+            <Controller
+              name="pincode"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Pincode" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
+      {/* Emergency Contact */}
+      <Row>
+        <FloatingLabel
+          controlId="floatingTextarea"
+          label="Emergency Contact Name & Address"
+          className="mb-3"
+        >
+          <Form.Control as="textarea" placeholder="Leave a comment here" style={{ height: '100px' }} />
+        </FloatingLabel>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="Emergency Contact No" label="Emergency Contact No">
+            <Controller
+              name="Emergency Contact Number"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Emergency Contact No" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="Relationship with Employee" label="Relationship with Employee ">
+            <Controller
+              name="Relationship with Employee"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="Relationship with Employee " />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="city" label="City ">
+            <Controller
+              name="city"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="text" placeholder="City" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
+
+      <Row className="mb-3">
+        <Col md={4}>
+          <FloatingLabel controlId="pincode" label="Pincode">
+            <Controller
+              name="pincode"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Pincode" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+
+        <Col md={4}>
+          <FloatingLabel controlId="contact" label="Contact No">
+            <Controller
+              name="contact"
+              control={control}
+              render={({ field }) => (
+                <Form.Control {...field} type="number" placeholder="Contact No" />
+              )}
+            />
+          </FloatingLabel>
+        </Col>
+      </Row>
     </Form>
   );
 };

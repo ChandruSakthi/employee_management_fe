@@ -5,7 +5,8 @@ import EducationForm from "./EducationForm";
 import SkillsForm from "./SkillsForm";
 import CertificationsForm from "./CertificationsForm";
 import KycForm from "./KycForm";
-import SubmitReview from "./SubmitReview";
+import ExperienceForm from "./ExperienceForm";
+import ReviewForm from "./ReviewForm";
 
 const Onboarding = () => {
   const { token } = theme.useToken();
@@ -14,10 +15,11 @@ const Onboarding = () => {
   const steps = [
     { title: "Personal", content: <PersonalForm /> },
     { title: "Education", content: <EducationForm /> },
-    { title: "Skills & Experience", content: <SkillsForm /> },
+    { title: "Skills", content: <SkillsForm /> },
     { title: "Certifications", content: <CertificationsForm /> },
+    { title: "Experience", content: <ExperienceForm /> },
     { title: "KYC", content: <KycForm /> },
-    { title: "Submit", content: <SubmitReview /> },
+    { title: "Review", content: <ReviewForm /> },
   ];
 
   const next = () => setCurrent(current + 1);
